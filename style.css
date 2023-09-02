@@ -7,7 +7,7 @@ body {
 
 .image-container {
   height: 100vh;
-  background-image: url('./img_main.jpeg');
+  background-image: url('./img_main.png');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -17,7 +17,6 @@ body {
 }
 
 .text-container {
-  padding: 3em;
   text-align: center;
 }
 
