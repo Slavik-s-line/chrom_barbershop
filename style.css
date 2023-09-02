@@ -20,3 +20,11 @@ body {
   padding: 3em;
   text-align: center;
 }
+
+.order-btn {
+  background-color: white;
+  color: black;
+  padding: 0.8em;
+  font: small-caps 24px/1 sans-serif;
+  border: 0;
+}
