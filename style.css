@@ -1,0 +1,22 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.image-container {
+  height: 100vh;
+  background-image: url('./img_main.jpeg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  padding: 3em;
+  text-align: center;
+}
