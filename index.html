@@ -18,8 +18,49 @@
     <title>chrombarbershop</title>
   </head>
   <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="toast-container position-fixed center-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">CHROM</strong>
+          <small>зараз</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div
+          class="toast-body"
+          style="color: black; background-color: rgb(191, 191, 191)"
+        >
+          Чекаємо тебе на відкритті через місяць ! Зробимо якісну стрижку та
+          пригостимо міцним віскі
+        </div>
+      </div>
+    </div>
+
     <div class="image-container">
-      <a href="https://dikidi.app/1234464" class="order-btn" style="text-decoration: none;">записатися на стрижку</a>
+      <button class="order-btn" style="text-decoration: none" id="liveToastBtn">
+        записатися на стрижку
+      </button>
     </div>
 
     <div class="text-container">
@@ -89,5 +130,19 @@
         </div>
       </section>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+          const toastBootstrap = new bootstrap.Toast(toastLiveExample)
+          toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+          })
+        }
+      })
+    </script>
   </body>
 </html>
